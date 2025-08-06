@@ -1,0 +1,14 @@
+name: Weekly Scheduled Workflow
+
+on:
+  schedule:
+    - cron: '0 18 * * 5'  # Runs every Friday at 12 AM UTC
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run a script
+        run: echo "This job runs every Friday at 12 AM UTC"
