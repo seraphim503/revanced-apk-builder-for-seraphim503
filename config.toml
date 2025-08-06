@@ -29,6 +29,6 @@ arch = "arm64-v8a"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
 arch = "arm64-v8a"
 
-[meme generator]
+[memegenerator]
 apkmirror-dlurl = "https://www.apkmirror.com/apk/zombodroid/meme-generator-free/"
 arch = "arm64-v8a"
