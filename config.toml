@@ -23,9 +23,10 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 arch = "both"
 
 [Tiktok]
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 arch = "both"
+included-patches = "'SIM spoof'"
 
 [YouTube]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
