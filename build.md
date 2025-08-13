@@ -1,7 +1,7 @@
-Messenger (arm64-v8a): 518.0.0.53.109  
-Messenger (arm-v7a): 518.0.0.53.109  
-Music (arm64-v8a): 8.30.51  
-Music (arm-v7a): 8.30.51  
+Messenger (arm64-v8a): 520.1.0.70.109  
+Messenger (arm-v7a): 520.1.0.70.109  
+Music (arm64-v8a): 8.31.51  
+Music (arm-v7a): 8.31.51  
 Reddit (arm64-v8a): 2024.17.0  
 Reddit (arm-v7a): 2024.17.0  
 Tiktok: 36.5.4  
