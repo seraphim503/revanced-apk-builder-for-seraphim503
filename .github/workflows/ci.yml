@@ -20,17 +20,35 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if ! git checkout origin/update build.md; then
-            echo "first time building!"
+          set -e
+
+          # Fetch latest updates
+          git fetch origin update
+
+          # Check if update branch exists
+          if ! git rev-parse --verify origin/update >/dev/null 2>&1; then
+            echo "No update branch found, building by default."
+            echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Check if build.md changed
+          if ! git diff --quiet origin/update -- build.md; then
+            echo "build.md changed, should build."
+            echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Run build.sh with --config-update and check output
+          UPDATE_CFG=$(./build.sh config.toml --config-update || true)
+          echo "UPDATE_CFG='$UPDATE_CFG'"
+
+          if [ -n "$UPDATE_CFG" ]; then
+            echo "Config changed, should build."
             echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
           else
-            UPDATE_CFG=$(./build.sh config.toml --config-update)
-            if [ "$UPDATE_CFG" ]; then
-              echo "'$UPDATE_CFG'"
-              echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
-            else
-              echo "SHOULD_BUILD=0" >> $GITHUB_OUTPUT
-            fi
+            echo "Nothing changed, skipping build."
+            echo "SHOULD_BUILD=0" >> $GITHUB_OUTPUT
           fi
 
       - name: Clear older runs
@@ -46,5 +64,5 @@ jobs:
     permissions: write-all
     needs: check
     uses: ./.github/workflows/build.yml
-    if: ${{ needs.check.outputs.SHOULD_BUILD == 1 }}
+    if: ${{ needs.check.outputs.SHOULD_BUILD == '1' }}
     secrets: inherit
