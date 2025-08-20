@@ -1,5 +1,3 @@
-Messenger (arm64-v8a): 520.1.0.70.109  
-Messenger (arm-v7a): 520.1.0.70.109  
 Music (arm64-v8a): 8.31.51  
 Music (arm-v7a): 8.31.51  
 Reddit (arm64-v8a): 2024.17.0  
@@ -18,3 +16,6 @@ Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to detach root ReVanc
 CLI: j-hc/revanced-cli-5.0.0-all.jar  
 Patches: ReVanced/patches-5.34.0.rvp  
 [Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v5.34.0)  
+
+Skipped:  
+Patches: ReVanced/patches-5.34.0.rvp    
