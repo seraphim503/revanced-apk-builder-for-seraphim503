@@ -1,4 +1,5 @@
-Messenger (arm64-v8a): 522.0.0.58.109  
+Messenger (arm64-v8a): 523.0.0.53.109  
+Messenger (arm-v7a): 523.0.0.53.109  
 Music (arm64-v8a): 8.31.51  
 Music (arm-v7a): 8.31.51  
 Reddit (arm64-v8a): 2024.17.0  
@@ -31,4 +32,5 @@ Patches: ReVanced/patches-5.34.0.rvp
 Patches: ReVanced/patches-5.34.0.rvp  
 Patches: ReVanced/patches-5.34.0.rvp  
 Patches: ReVanced/patches-5.34.0.rvp  
-Patches: ReVanced/patches-5.34.0.rvp                            
+Patches: ReVanced/patches-5.34.0.rvp  
+Patches: ReVanced/patches-5.34.0.rvp                              
